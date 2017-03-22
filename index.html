@@ -1,54 +1,131 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ScrollMagic Demo - The Basics</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <style>
+
+        .c-wrapper {
+            width: 700px;
+            height: 350px;
+            top: 200px;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            position: absolute;
+        }
+
+        .c-aside {
+            position: absolute;
+            bottom: 30px;
+            left: -40px;
+            width: 200px;
+            height: 70px;
+            background: #000;
+        }
+
+        .c-content {
+            position: absolute;
+            width: 80%;
+            text-align: justify;
+            right: -100px;
+            top: 70px;
+        }
+
+        h3.c-aside-title {
+            position: absolute;
+            left: -30px;
+            font-size: 50px;
+            top: -30px;
+        }
+
+        .top-block {
+            background-color: #ccc;
+        }
+
+        .bottom-bock,
+        .c-section,
+        .top-block {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .bottom-bock {
+            background-color: #aaa;
+        }
+
+        .c-wrapper.bottom {
+            top: 750px;
+        }
+
+        .c-section {
+            height: 150vh;
+        }
+
+    </style>
 </head>
 <body>
 
-<section id="one">
-    <div class="inner innerS1">
-        <h1>Simple ScrollMagic Tutorial</h1>
-        <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
-    </div>
-</section>
-<section id="two">
-    <div class="innerText innerS2">
-        <h2>Why to learn ScrollMagic?</h2>
-        <ul class="features">
-            <li>It's great for <strong>story telling websites</strong></li>
-            <li>It gives you <strong>endless creative power</strong></li>
-            <li>It's <strong>easy to use</strong> once you get it</li>
-        </ul>
-    </div>
-</section>
-<section id="three">
-    <div class="innerText innerS3">
-        <h2>When to use ScrollMagic?</h2>
-        <ul class="features">
-            <li>When building <strong>interactive infographics</strong></li>
-            <li>When introducing your <strong>product or service</strong></li>
-            <li>When sharing your <strong>unique story or timeline</strong></li>
-        </ul>
-    </div>
-</section>
-<section id="four">
-    <div class="innerText innerS4">
-        <h2>Want to learn more?</h2>
-    </div>
-    <div class="iphone">
-        <p class="screen screenHat"><img src="images/img_scrollMagic.png" /></p>
-        <p class="screen screenA">A</p>
-        <p class="screen screenB">B</p>
-        <p class="screen screenC">C</p>
-    </div>
-</section>
+<div class="top-block">top</div>
+<div class="top-block">top</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<div class="c-section" id="section2">
+    <div class="c-wrapper">
+        <div class="c-aside"></div>
+        <h3 class="c-aside-title">Tadaaa</h3>
+        <div class="c-content">
+            <h2 class="c-contnet-title">Some title here</h2>
+            <p class="c-content-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab alias aspernatur,
+                at, cupiditate, enim eos minima natus nihil numquam quia quis quo sint. Blanditiis culpa ducimus
+                molestiae officiis similique?</p>
+        </div>
+    </div>
 
-<!-- Include ScrollMagic and GSAP plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
-<script src="script.js"></script>
+    <div class="c-wrapper bottom">
+        <div class="c-aside"></div>
+        <h3 class="c-aside-title">Tadaaa</h3>
+        <div class="c-content">
+            <h2 class="c-contnet-title">Some title here</h2>
+            <p class="c-content-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab alias aspernatur,
+                at, cupiditate, enim eos minima natus nihil numquam quia quis quo sint. Blanditiis culpa ducimus
+                molestiae officiis similique?</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="bottom-bock">bottom</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
